@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="right-side lg:pr-4">
-                        <h2 class="right-side lg:pr-4">Welcome <span class="capitalize">{{user_profile.user.username}}</span></h2>
+                        <h2 class="right-side lg:pr-4">Welcome {{user_profile.user.username}}</h2>
                     </div>
 
                     <div class="right-side lg:pr-4">
@@ -200,7 +200,7 @@
                     <div class="space-y-5 flex-shrink-0 lg:w-7/12">
 
                         <!-- post 1-->
-                        {% for post in posts reversed%}
+                        {% for post in posts%}
                         <div class="bg-white shadow rounded-md  -mx-2 lg:mx-0">
                             <!-- post header-->
                             <div class="flex justify-between items-center px-4 py-3">
@@ -210,9 +210,9 @@
                                             <img src="{{ user_profile.profileimg.url}}" class="bg-gray-200 border border-white rounded-full w-8 h-8">
                                         </div>
                                     </a>
-                                    <span class="block capitalize font-semibold "> <a href="#">{{post.user}}</a> </span>
+                                    <span class="block capitalize font-semibold "> <a href="/profile/{{post.user}}">{{post.user}}</a> </span>
                                 </div>
-                              <div>
+                            <div>
                                 <a href="#"> <i class="icon-feather-more-horizontal text-2xl hover:bg-gray-200 rounded-full p-2 transition -mr-1 "></i> </a>
                                 <div class="bg-white w-56 shadow-md mx-auto p-2 mt-12 rounded-md text-gray-500 hidden text-base border border-gray-100  " uk-drop="mode: hover;pos: top-right">
                               
